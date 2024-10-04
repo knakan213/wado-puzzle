@@ -5,7 +5,7 @@ import random
 # 二字熟語の各1文字目から、その字に続く2文字目の集合への辞書abと
 # 各2文字目から、その字に先行する1文字目の集合への辞書baを作成する
 ab, ba = {}, {}
-with open('all.csv') as f:
+with open('all.csv', encoding = 'utf-8') as f: # encodingの指定はWindowsで必要
     # all.csvは(二字または三字)熟語が頻度順に並んでいる 
     # 出題を常識的な難易度にするため、ここでは最頻20000項目程度を使う
     for s in f.readlines()[:20000]:
