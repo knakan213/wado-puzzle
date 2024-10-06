@@ -1,6 +1,7 @@
 import sys
 import itertools
 import random
+import os
 
 # 二字熟語の各1文字目から、その字に続く2文字目の集合への辞書abと
 # 各2文字目から、その字に先行する1文字目の集合への辞書baを作成する
@@ -46,8 +47,9 @@ if __name__ == '__main__':
     elif len(sys.argv) == 1:
         main()
     else:
+        cmd = os.path.basename(sys.executable) + ' ' + sys.argv[0]
         print('Invalid arguments:', ' '.join(sys.argv))
-        print('Usage: python3', sys.argv[0])
-        print('       python3 %s <four kanjis>' % sys.argv[0])
-        print('Example: python3 %s 妥割方分' % sys.argv[0])
+        print('Usage:', cmd)
+        print('       %s <four kanjis>' % cmd)
+        print('Example: %s 妥割方分' % cmd)
         sys.exit(1)
