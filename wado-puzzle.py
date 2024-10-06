@@ -19,7 +19,7 @@ def solve(uldr):
                               for d, x in zip((ab, ab, ba, ba), uldr)))
 
 assert solve('明告昼熱') == {'白'} # Wikipediaに載っていた例
-assert solve('支退口席') == {'出'} # 灘中学校 2009年 入試 国語
+assert solve('妥割方分') == {'当'}
 
 def main():
     '''和同開珎パズルをランダムに生成し出題する'''
